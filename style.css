@@ -12,7 +12,6 @@ body {
   --nav-bg: #000000;
   --nav-text: #ffffff;
 
-  /* Variáveis do botão - MODO CLARO */
   --btn-bg: #000000;
   --btn-text: #ffffff;
   --btn-hover: #222222;
@@ -30,7 +29,6 @@ body:has(#theme-switch:checked) {
   --text-sub: #a0a0a0;
   --nav-bg: #050505;
 
-  /* Variáveis do botão - MODO ESCURO */
   --btn-bg: #0ef125;
   --btn-text: #000000;
   --btn-hover: #0ad620;
@@ -48,7 +46,6 @@ body:has(#theme-switch:checked) {
   align-items: center;
 }
 
-/* --- Navbar --- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -58,7 +55,6 @@ body:has(#theme-switch:checked) {
   color: var(--nav-text);
 }
 
-/* --- Logo / Nome --- */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -72,7 +68,6 @@ body:has(#theme-switch:checked) {
   color: #cccccc;
 }
 
-/* --- Navegação --- */
 .nav-links {
   list-style: none;
   display: flex;
@@ -93,7 +88,6 @@ body:has(#theme-switch:checked) {
   color: #888888;
 }
 
-/* --- Ícones --- */
 .theme-toggle-label .icon-light {
   display: inline-block;
   color: var(--nav-text);
@@ -103,7 +97,6 @@ body:has(#theme-switch:checked) {
   display: none;
 }
 
-/* Quando o tema escuro estiver ativo */
 body:has(#theme-switch:checked) .theme-toggle-label .icon-light {
   display: none;
 }
@@ -123,7 +116,6 @@ body:has(#theme-switch:checked) .theme-toggle-label .icon-dark {
   transform: scale(1.1) rotate(15deg);
 }
 
-/* --- Hero --- */
 .hero {
   display: flex;
   align-items: center;
@@ -166,7 +158,6 @@ body:has(#theme-switch:checked) .theme-toggle-label .icon-dark {
   margin-bottom: 40px;
 }
 
-/* --- Botões --- */
 .hero-buttons {
   display: flex;
   gap: 20px;
@@ -206,7 +197,6 @@ body:has(#theme-switch:checked) .theme-toggle-label .icon-dark {
   color: var(--bg-main);
 }
 
-/* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -232,7 +222,6 @@ body:has(#theme-switch:checked) .theme-toggle-label .icon-dark {
   }
 }
 
-/* --- Seção Projetos --- */
 .projetos {
   padding: 80px 50px;
   background-color: var(--bg-main);
@@ -297,7 +286,6 @@ body:has(#theme-switch:checked) .projeto-card {
   margin-bottom: 20px;
 }
 
-/* Tecnologias usadas */
 .projeto-techs {
   display: flex;
   gap: 10px;
@@ -313,7 +301,6 @@ body:has(#theme-switch:checked) .projeto-card {
   font-weight: 500;
 }
 
-/* Links dentro dos cards */
 .projeto-links {
   display: flex;
   gap: 15px;
@@ -350,7 +337,6 @@ body:has(#theme-switch:checked) .projeto-card {
   color: var(--bg-main);
 }
 
-/* Ajuste para celular */
 @media (max-width: 768px) {
   .projetos {
     padding: 60px 20px;
@@ -360,7 +346,6 @@ body:has(#theme-switch:checked) .projeto-card {
   }
 }
 
-/* --- Banner/Foto do Projeto --- */
 .projeto-banner {
   width: 100%;
   height: 200px;
@@ -385,7 +370,6 @@ body:has(#theme-switch:checked) .projeto-card {
   filter: grayscale(0%);
 }
 
-/* --- Seção Sobre Mim --- */
 .sobre {
   padding: 80px 50px;
   background-color: var(--bg-main);
@@ -400,7 +384,6 @@ body:has(#theme-switch:checked) .projeto-card {
   margin-top: 20px;
 }
 
-/* Coluna de Texto */
 .sobre-texto p {
   font-size: 17px;
   line-height: 1.7;
@@ -408,7 +391,6 @@ body:has(#theme-switch:checked) .projeto-card {
   margin-bottom: 20px;
 }
 
-/* Ícones das Redes Sociais */
 .sobre-redes {
   display: flex;
   gap: 20px;
@@ -473,7 +455,7 @@ body:has(#theme-switch:checked) .skill-card {
   font-size: 22px;
 }
 
-/* Responsividade para Celular */
+
 @media (max-width: 900px) {
   .sobre-container {
     grid-template-columns: 1fr;
@@ -484,7 +466,6 @@ body:has(#theme-switch:checked) .skill-card {
   }
 }
 
-/* --- Seção Contato --- */
 .contato {
   padding: 80px 50px;
   background-color: var(--bg-main);
@@ -560,5 +541,87 @@ body:has(#theme-switch:checked) .skill-card {
   .btn-enviar {
     width: 100%; 
     text-align: center;
+  }
+}
+
+.formacao {
+  padding: 80px 50px;
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease;
+}
+
+.formacao-container {
+  max-width: 800px;
+  margin: 20px 0 0 10px;
+  border-left: 2px solid var(--text-sub); 
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formacao-item {
+  position: relative;
+}
+
+.formacao-item::before {
+  content: "";
+  position: absolute;
+  left: -41px; 
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-main);
+  border: 2px solid var(--bg-main);
+  transition: background-color 0.3s ease;
+}
+
+.formacao-item:hover::before {
+  background-color: #0ef125;
+}
+
+.formacao-ano {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a3e3d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+body:has(#theme-switch:checked) .formacao-ano {
+  color: #0ef125;
+}
+
+.formacao-detalhes h3 {
+  font-size: 20px;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.formacao-detalhes h4 {
+  font-size: 16px;
+  color: var(--text-sub);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.formacao-detalhes p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-sub);
+  max-width: 650px;
+}
+
+@media (max-width: 768px) {
+  .formacao {
+    padding: 60px 20px;
+  }
+  .formacao-container {
+    padding-left: 20px;
+  }
+  .formacao-item::before {
+    left: -31px;
   }
 }
